@@ -1,0 +1,36 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "build",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++11",
+                "-static-libgcc", // 静态链接
+                "-Wall", // 开启额外警告
+                "-I","${workspaceFolder}/",
+                "-I","/usr/include/librealsense2",
+                "-I","/usr/local/include/",
+                "-I","/usr/local/include/opencv4/",
+                "-I","/usr/local/include/opencv4/opencv2/",
+                "-g",
+                "${workspaceFolder}/main.cpp",
+                "-o",
+                "${workspaceFolder}/bin/run.o",//输出的文件名称以及路径
+                "/usr/local/lib/libopencv_*",
+                "/usr/lib/x86_64-linux-gnu/librealsense2.so",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

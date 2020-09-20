@@ -1,0 +1,42 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.out
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+#忽略生成的可执行文件
+/bin/run.out
+#忽略掉 .vscode 文件夹
+/.vscode/ipch/
+/.vscode/settings.json
+#忽略掉 相机的生成文件
+*.mvdat
+*.config
